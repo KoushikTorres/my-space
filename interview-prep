@@ -1,0 +1,208 @@
+LINUX:
+
+System Information:
+-------------------------------------------------
+uname -a: Display Linux system information.
+lsb_release -a: Display distribution-specific information.
+cat /etc/os-release: Show information about the operating system.
+Package Management:
+
+apt (Ubuntu/Debian) or yum (Red Hat/CentOS):
+apt-get update or yum update: Update package lists.
+apt-get install or yum install: Install packages.
+apt-get remove or yum remove: Remove packages.
+File and Directory Management:
+
+ls: List directory contents.
+cd: Change directory.
+cp: Copy files or directories.
+mv: Move or rename files or directories.
+rm: Remove files or directories.
+File Editing:
+
+nano, vim, emacs: Text editors for editing files.
+User and Permissions:
+
+useradd, userdel: Add or delete users.
+passwd: Change user password.
+chown: Change file owner.
+chmod: Change file permissions.
+Process Management:
+
+ps: Display information about running processes.
+kill: Send a signal to a process.
+top or htop: Display dynamic real-time system statistics.
+Networking:
+
+ifconfig or ip a: Show network interfaces.
+netstat or ss: Display network connections.
+ping: Check network connectivity.
+traceroute or mtr: Trace the route to a destination.
+System Monitoring:
+
+free: Display amount of free and used memory.
+df: Show disk space usage.
+du: Display disk usage of files and directories.
+Logs and Troubleshooting:
+
+journalctl: Query and display messages from the journal.
+tail or cat: Display the last part of a file.
+dmesg: Print or control the kernel ring buffer.
+Automation and Scripting:
+
+bash or sh: Shell scripting.
+chmod +x script.sh and ./script.sh: Make a script executable and run it.
+These commands provide a foundation for DevOps tasks, but depending on the specific tools and technologies you're working with, you may need to use additional commands and utilities.
+
+AWS:
+-------------------
+IaaS Services:
+
+Amazon EC2 (Elastic Compute Cloud): Virtual servers in the cloud.
+Amazon VPC (Virtual Private Cloud): Networking for your AWS resources.
+Amazon S3 (Simple Storage Service): Object storage for the internet.
+Amazon EBS (Elastic Block Store): Block storage for EC2 instances.
+Amazon RDS (Relational Database Service): Managed relational databases.
+Amazon DynamoDB: Fully managed NoSQL database service.
+Amazon Route 53: Scalable domain name system (DNS) web service.
+Amazon Elastic Load Balancer (ELB): Automatically distribute incoming application traffic.
+DevOps Services:
+
+AWS CodePipeline: Continuous integration and continuous delivery (CI/CD) service.
+AWS CodeBuild: Fully managed build service that compiles source code, runs tests, and produces artifacts.
+AWS CodeDeploy: Automated deployment service.
+AWS CodeCommit: Fully managed source control service.
+AWS CloudFormation: Infrastructure as Code (IaC) service for defining and provisioning AWS infrastructure.
+AWS CloudWatch: Monitoring and logging service.
+AWS Systems Manager: Gain operational insights and take action on AWS resources.
+AWS X-Ray: Distributed tracing service for applications.
+Additional Services Relevant to DevOps:
+
+AWS Lambda: Serverless compute service.
+Amazon ECS (Elastic Container Service): Highly scalable, fast container management service.
+Amazon ECR (Elastic Container Registry): Docker container registry.
+AWS Step Functions: Coordinate the components of distributed applications using visual workflows.
+AWS Identity and Access Management (IAM): Security for AWS resources.
+-----------------------------------------------------------------------------------------------------------
+GIT
+---
+Basic Commands:
+git init
+
+Use Case: Initialize a new Git repository.
+git clone <repository-url>
+
+Use Case: Clone a repository into a new directory.
+git add <file> or git add .
+
+Use Case: Add changes to the staging area before committing.
+git commit -m "commit message"
+
+Use Case: Commit changes to the repository.
+Branching:
+git branch
+
+Use Case: List all local branches.
+git branch <branch-name>
+
+Use Case: Create a new branch.
+git checkout <branch-name> or git switch <branch-name>
+
+Use Case: Switch to a different branch.
+git merge <branch-name>
+
+Use Case: Merge changes from one branch into the current branch.
+Remote Repositories:
+git remote add origin <repository-url>
+
+Use Case: Add a remote repository.
+git push -u origin <branch-name>
+
+Use Case: Push changes to a remote repository.
+git pull origin <branch-name>
+
+Use Case: Fetch changes from a remote repository and merge them.
+Collaboration:
+git fork
+
+Use Case: Create a personal copy of someone else's project.
+git pull-request
+
+Use Case: Propose changes to the upstream repository.
+git fetch --all
+
+Use Case: Fetch all branches from the remote repository.
+Checking Status and History:
+git status
+
+Use Case: Show the status of changes as untracked, modified, or staged.
+git log
+
+Use Case: Display the commit history.
+git diff
+
+Use Case: Show changes between commits, the working directory, and the staging area.
+Undoing Changes:
+git reset <file>
+
+Use Case: Unstage a file.
+git revert <commit>
+
+Use Case: Create a new commit that undoes a previous commit.
+git reset --hard <commit>
+
+Use Case: Discard changes in the working directory and staging area.
+---------------------------------------------------------------------------------------
+
+Basic Ansible Concepts:
+What is Ansible?
+
+Answer: Ansible is an open-source automation tool for configuration management, application deployment, and task automation.
+Explain Ansible Playbook.
+
+Answer: Ansible Playbooks are YAML files that define a set of tasks to be executed on remote hosts. They are used for automation and configuration management.
+What is an Ansible Role?
+
+Answer: An Ansible Role is a way to organize related tasks, handlers, and variables into a directory structure. It promotes code reusability and modularity.
+Differentiate between Ansible and Puppet.
+
+Answer: Both Ansible and Puppet are configuration management tools, but Ansible is agentless, uses YAML for configuration, and is generally simpler to set up compared to Puppet.
+Inventory Management:
+What is Ansible Inventory?
+
+Answer: Ansible Inventory is a file that contains a list of host names or IP addresses of remote servers. It defines the hosts on which Ansible tasks are executed.
+Explain Dynamic Inventory in Ansible.
+
+Answer: Dynamic Inventory in Ansible allows the inventory to be generated or pulled from external sources dynamically, such as cloud providers or databases.
+Playbook Execution:
+How do you run an Ansible playbook?
+
+Answer: Ansible playbooks are executed using the ansible-playbook command followed by the playbook file name.
+Explain Ansible Ad-Hoc Commands.
+
+Answer: Ansible Ad-Hoc Commands are one-liners used to perform simple tasks without the need for a playbook. They are executed using the ansible command.
+Variables and Facts:
+What is the difference between Ansible Variables and Facts?
+
+Answer: Variables are user-defined values used in playbooks, while Facts are information collected from remote hosts by Ansible.
+How do you define variables in Ansible?
+
+Answer: Variables can be defined in various places, including playbooks, roles, and inventory files. They are often defined using YAML syntax.
+Roles and Task Execution:
+Explain Ansible Handlers.
+
+Answer: Ansible Handlers are special tasks that are only run when notified by other tasks. They are typically used to restart services after a configuration change.
+How do you include a task file from another Ansible role?
+
+Answer: You can use the include_role task to include a task file from another role in an Ansible playbook.
+Ansible Best Practices:
+What are some best practices for writing Ansible playbooks?
+Answer: Best practices include using roles for modularity, keeping playbooks idempotent, documenting tasks, and using Ansible Vault for sensitive data.
+Troubleshooting and Debugging:
+How do you enable debugging in Ansible?
+
+Answer: Debugging can be enabled by adding the -vvv option to the ansible-playbook command.
+What is Ansible Vault, and why is it used?
+
+Answer: Ansible Vault is used to encrypt sensitive data in Ansible playbooks, such as passwords or secret keys.
+----------------------------------------------------------------------
